@@ -1,7 +1,9 @@
-package com.example.joon1.group_it_up;
+package com.example.joon1.group_it_up.Controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.joon1.group_it_up.R;
 
 public class MainActivity extends AppCompatActivity {
 
