@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1005103154725",
+    "firebase_url": "https://group-cf9ea.firebaseio.com",
+    "project_id": "group-cf9ea",
+    "storage_bucket": "group-cf9ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005103154725:android:5133fcbd4bda16ca",
+        "android_client_info": {
+          "package_name": "com.example.joon1.group_it_up"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005103154725-4vdg4e3k4t4cb3kin3gi1okpatqm1371.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG0VXKDPTrIqHEp0qAgDJG5-WRNJc7yUw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
