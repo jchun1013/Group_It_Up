@@ -102,6 +102,16 @@ public class Main_List_Page extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Make_EventCard_Page.class));
             }
         });
+
+        filterBtn = (Button) findViewById(R.id.filterBtn);
+        filterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Filter.class));
+            }
+        });
     }
+
+
 }
 
