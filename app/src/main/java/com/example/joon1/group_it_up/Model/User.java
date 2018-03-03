@@ -5,13 +5,13 @@ package com.example.joon1.group_it_up.Model;
  */
 
 public class User {
-    private static int uid;
+    public static int uid = 0;
     private String account;
     private String password;
     private int contact;
 
     public User(int uid, String account, String password, int contact) {
-        this.uid = uid++;
+        this.uid = uid;
         this.account = account;
         this.password = password;
         this.contact = contact;
