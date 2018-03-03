@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.joon1.group_it_up.Controller.Main_List_Page">
+    tools:context="com.example.joon1.group_it_up.Controller.Main_List_Page"
+    tools:layout_editor_absoluteY="81dp">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addEvent"
+    <Button
+        android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#21ce99"
-        android:tint="@android:color/white"
-        android:clickable="true"
-        app:backgroundTint="@android:color/holo_green_light"
-        app:rippleColor="@android:color/darker_gray"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="425dp" />
-
+        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="34dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
