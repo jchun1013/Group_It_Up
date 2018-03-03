@@ -8,9 +8,9 @@ public class User {
     public static int uid = 0;
     private String account;
     private String password;
-    private int contact;
+    private String contact;
 
-    public User(int uid, String account, String password, int contact) {
+    public User(int uid, String account, String password, String contact) {
         this.uid = uid;
         this.account = account;
         this.password = password;
@@ -21,7 +21,7 @@ public class User {
         return uid;
     }
 
-    public int getContact() {
+    public String getContact() {
         return contact;
     }
 
@@ -45,7 +45,7 @@ public class User {
         this.password = password;
     }
 
-    public void setContact(int contact) {
+    public void setContact(String contact) {
         this.contact = contact;
     }
 }

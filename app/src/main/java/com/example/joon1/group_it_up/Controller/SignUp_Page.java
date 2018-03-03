@@ -29,8 +29,7 @@ import static com.example.joon1.group_it_up.Model.User.uid;
 public class SignUp_Page extends AppCompatActivity {
     EditText userText, passText, phoneText;
     Button submitBtn, cancelBtn;
-    String username, password;
-    int contact;
+    String username, password, contact;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference = database.getInstance().getReference("user");
@@ -53,16 +52,14 @@ public class SignUp_Page extends AppCompatActivity {
         submitBtn = (Button) findViewById(R.id.submitBtn);
         cancelBtn = (Button) findViewById(R.id.cancelBtn);
 
-        contact = 0;
-
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 username = userText.getText().toString();
                 password = passText.getText().toString();
-                contact = Integer.parseInt(phoneText.getText().toString());
+                contact = phoneText.getText().toString();
 
-                if (username == null || password == null || contact == 0) {
+                if (username == null || password == null || contact == null) {
                     Toast nullToast = Toast.makeText(getApplicationContext(),
                             "One or more fields are empty.", Toast.LENGTH_LONG);
                     nullToast.show();
