@@ -14,12 +14,12 @@ import com.example.joon1.group_it_up.R;
  * Created by Minky on 2018-03-03.
  */
 
-public class ListAdapter extends ArrayAdapter {
+public class ListAdapterHelper extends ArrayAdapter {
     private final Activity context;
     private final String[] tArray;
     private final String[] sArray;
 
-    public ListAdapter(Activity context, String[] tArray, String[] sArray) {
+    public ListAdapterHelper(Activity context, String[] tArray, String[] sArray) {
         super(context, R.layout.listview_row, tArray);
 
         this.context = context;

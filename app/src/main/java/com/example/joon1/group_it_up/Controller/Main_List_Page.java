@@ -36,7 +36,7 @@ import static com.example.joon1.group_it_up.Model.EventCard.eid;
 public class Main_List_Page extends AppCompatActivity {
 
 
-//    SimpleCursorAdapter sAdapter;
+    //    SimpleCursorAdapter sAdapter;
     FloatingActionButton addBtn;
     private ListView lv;
 //    FirebaseDatabase database;
@@ -54,7 +54,7 @@ public class Main_List_Page extends AppCompatActivity {
             sArray[i] = eventCards.get(i).getSports().toString();
         }
 
-        ListAdapter adapter = new ListAdapter(this, tArray, sArray);
+        ListAdapterHelper adapter = new ListAdapterHelper(this, tArray, sArray);
         lv = (ListView) findViewById(R.id.listV);
         lv.setAdapter(adapter);
 
@@ -185,8 +185,4 @@ public class Main_List_Page extends AppCompatActivity {
 //    public void onListItemClick(ListView lv, View v, int position, long id) {
 //
 //    }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master

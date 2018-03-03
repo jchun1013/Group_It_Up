@@ -144,11 +144,23 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     }
 
     public void selectClicked(View v) {
-        address = addressList.get(0).getAddressLine(0) + ", " + addressList.get(0).getLocality() + ", "
-                    + addressList.get(0).getAdminArea() + ", " + addressList.get(0).getCountryName() + ", "
-                    + addressList.get(0).getPostalCode();
-        System.out.println("-----------------------------------------------------------------------");
-        System.out.println("address: " + address);
+        address = "";
+        if (addressList.get(0).getAddressLine(0) != "") {
+            address += (addressList.get(0).getAddressLine(0) + ", ");
+        }
+        if (addressList.get(0).getLocality() != "") {
+            address += (addressList.get(0).getLocality() + ", ");
+        }
+        if (addressList.get(0).getAdminArea() != "") {
+            address += (addressList.get(0).getAdminArea() + ", ");
+        }
+        if (addressList.get(0).getCountryName() != "") {
+            address += (addressList.get(0).getCountryName() + ", ");
+        }
+        if (addressList.get(0).getPostalCode() != "") {
+            address += addressList.get(0).getPostalCode();
+        }
+
         this.finish();
     }
 
