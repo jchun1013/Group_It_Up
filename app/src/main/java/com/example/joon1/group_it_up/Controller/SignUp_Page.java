@@ -94,27 +94,34 @@ public class SignUp_Page extends AppCompatActivity {
     }
 
     private void addUser(final User newUser) {
-        firebaseAuth = FirebaseAuth.getInstance();
+        String id = databaseReference.push().getKey();
+        databaseReference.child(id).setValue(newUser);
+        String id2 = databaseReference2.push().getKey();
+        databaseReference2.child(id2).setValue(username);
+        SaveSharedPreference.setUserName(getApplicationContext(), username);
+        startActivity(new Intent(getApplicationContext(), Main_List_Page.class));
 
-        firebaseAuth.createUserWithEmailAndPassword(username, password)
-                .addOnCompleteListener(SignUp_Page.this,
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Log.d(TAG, "createUserWithEmail : " + task.isSuccessful());
-                                if (task.isSuccessful()) {
-                                    String id = databaseReference.push().getKey();
-                                    databaseReference.child(id).setValue(newUser);
-                                    String id2 = databaseReference2.push().getKey();
-                                    databaseReference2.child(id2).setValue(username);
-//                                    Toast toast = Toast.makeText(getApplicationContext(),
-//                                            "Registration Successful!",
-//                                            Toast.LENGTH_SHORT);
-//                                    toast.show();
-                                    SaveSharedPreference.setUserName(getApplicationContext(), username);
-                                    startActivity(new Intent(getApplicationContext(), Main_List_Page.class));
-                                }
-                            }
-                        });
+//        firebaseAuth = FirebaseAuth.getInstance();
+//
+//        firebaseAuth.createUserWithEmailAndPassword(username, password)
+//                .addOnCompleteListener(SignUp_Page.this,
+//                        new OnCompleteListener<AuthResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<AuthResult> task) {
+//                                Log.d(TAG, "createUserWithEmail : " + task.isSuccessful());
+//                                if (task.isSuccessful()) {
+//                                    String id = databaseReference.push().getKey();
+//                                    databaseReference.child(id).setValue(newUser);
+//                                    String id2 = databaseReference2.push().getKey();
+//                                    databaseReference2.child(id2).setValue(username);
+////                                    Toast toast = Toast.makeText(getApplicationContext(),
+////                                            "Registration Successful!",
+////                                            Toast.LENGTH_SHORT);
+////                                    toast.show();
+//                                    SaveSharedPreference.setUserName(getApplicationContext(), username);
+//                                    startActivity(new Intent(getApplicationContext(), Main_List_Page.class));
+//                                }
+//                            }
+//                        });
     }
 }
