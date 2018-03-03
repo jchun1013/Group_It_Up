@@ -117,12 +117,12 @@ public class Make_EventCard_Page extends AppCompatActivity {
                 if (contactText.getText() == null ||  titleText.getText() == null) {
                     Toast.makeText(Make_EventCard_Page.this, "One or more field is empty", Toast.LENGTH_SHORT).show();
                 } else {
-                    EventCard eventCard = new EventCard(titleText.getText().toString(),
-                            commentText.getText().toString(), uid, contact,
-                            (Sports) sportSpinner.getSelectedItem(),
-                            (Gender) genderSpinner.getSelectedItem(),
-                            (Experience) expSpinner.getSelectedItem(), date);
-                    addEventCard(eventCard);
+//                    EventCard eventCard = new EventCard(titleText.getText().toString(),
+//                            commentText.getText().toString(), uid, contact,
+//                            (Sports) sportSpinner.getSelectedItem(),
+//                            (Gender) genderSpinner.getSelectedItem(),
+//                            (Experience) expSpinner.getSelectedItem(), date);
+//                    addEventCard(eventCard);
                 }
             }
         });
