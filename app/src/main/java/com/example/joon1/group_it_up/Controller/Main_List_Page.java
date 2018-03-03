@@ -12,7 +12,7 @@ import com.example.joon1.group_it_up.R;
 
 public class Main_List_Page extends AppCompatActivity {
 
-    ImageButton addBtn;
+    FloatingActionButton addBtn;
 
 
     @Override
@@ -21,7 +21,7 @@ public class Main_List_Page extends AppCompatActivity {
         System.out.println("Its here!!!!!!!!!!!");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addBtn = (ImageButton) findViewById(R.id.addBtn);
+        addBtn = (FloatingActionButton) findViewById(R.id.addBtn);
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
