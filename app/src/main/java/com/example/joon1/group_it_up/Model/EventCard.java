@@ -12,6 +12,7 @@ public class EventCard {
     private Experience experience;
     private String date;
     private RecOrComp rec;
+    public static int eid = 0;
 
     public EventCard() {
 
@@ -19,7 +20,7 @@ public class EventCard {
 
     public EventCard(String myTitle, String myComments, int myUid, String myContact,
                      Sports mySport, Gender myGender, Experience myExp,
-                      String date, RecOrComp rec, String location) {
+                      String date, RecOrComp rec, String location, int eid) {
         this.title = myTitle;
         this.comments = myComments;
         this.uid = myUid;
@@ -30,8 +31,15 @@ public class EventCard {
         this.date = date;
         this.location = location;
         this.rec = rec;
+        this.eid = eid;
     }
 
+    public int getEid() {
+        return eid;
+    }
+    public void setEid(int eid) {
+        this.eid = eid;
+    }
     public RecOrComp getRec() {
         return rec;
     }

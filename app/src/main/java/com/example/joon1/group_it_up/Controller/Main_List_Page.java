@@ -89,12 +89,12 @@ public class Main_List_Page extends AppCompatActivity {
                         Iterable<DataSnapshot> children = dataSnapshot.getChildren();
                         EventCard selected = myList.get(placed);
 
-                        for (DataSnapshot child : children) {
-                            EventCard childValue = child.getValue(EventCard.class);
-                            if (childValue.get() == selected.getId()) {
-                                purityReport = childValue;
-                            }
-                        }
+//                        for (DataSnapshot child : children) {
+//                            EventCard childValue = child.getValue(EventCard.class);
+//                            if (childValue.get() == selected.getId()) {
+//                                purityReport = childValue;
+//                            }
+//                        }
                     }
 
                     @Override

@@ -29,6 +29,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static com.example.joon1.group_it_up.Controller.MapActivity.address;
+import static com.example.joon1.group_it_up.Model.EventCard.eid;
 
 public class Make_EventCard_Page extends AppCompatActivity {
 
@@ -122,12 +123,13 @@ public class Make_EventCard_Page extends AppCompatActivity {
                 if (contactText.getText() == null ||  titleText.getText() == null) {
                     Toast.makeText(Make_EventCard_Page.this, "One or more field is empty", Toast.LENGTH_SHORT).show();
                 } else {
+                    eid++;
                     EventCard eventCard = new EventCard(titleText.getText().toString(),
                             commentText.getText().toString(), uid, contact,
                             (Sports) sportSpinner.getSelectedItem(),
                             (Gender) genderSpinner.getSelectedItem(),
                             (Experience) expSpinner.getSelectedItem(), date,
-                            (RecOrComp) recSpinner.getSelectedItem(), address);
+                            (RecOrComp) recSpinner.getSelectedItem(), address, eid);
                     addEventCard(eventCard);
                 }
             }
