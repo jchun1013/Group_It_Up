@@ -47,6 +47,10 @@
         <activity
             android:name=".Controller.MapActivity"
             android:label="@string/title_activity_map" />
+        <activity
+            android:name=".Controller.Filter"
+            android:label="@string/title_activity_filter"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
