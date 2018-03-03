@@ -54,6 +54,7 @@ public class EventCard {
     public Experience getExperience() {return this.experience;}
     private void setExperience(Experience nExp) {this.experience = nExp;}
 
+    public String toString() {return this.title;}
 
 
 
