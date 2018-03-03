@@ -50,9 +50,9 @@ public class Main_List_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        System.out.println("_________________________________");
-//        System.out.println("This is eid " + eid);
-//        System.out.println("This is size of " + eventCards.size());
+        System.out.println("_________________________________");
+        System.out.println("This is eid " + eid);
+        System.out.println("This is size of " + eventCards.size());
         String[] tArray = new String[eid];
         String[] sArray = new String[eid];
         for (int i = 0; i < eid; i++) {
