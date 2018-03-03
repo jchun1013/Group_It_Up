@@ -41,9 +41,10 @@ public class Main_List_Page extends AppCompatActivity {
     Button filterBtn;
     private ListView lv;
     static int placed;
-    FirebaseDatabase database;
-    DatabaseReference databaseReference;
     public static EventCard selectedEvent;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +74,7 @@ public class Main_List_Page extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Iterable<DataSnapshot> children = dataSnapshot.getChildren();
                         EventCard selected = eventCards.get(placed);
+                        System.out.println("________________________________");
 
                         for (DataSnapshot child : children) {
                             EventCard childValue = child.getValue(EventCard.class);
