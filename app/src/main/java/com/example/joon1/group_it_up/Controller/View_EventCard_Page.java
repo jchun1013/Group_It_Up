@@ -10,6 +10,7 @@ import android.widget.TextView;
 import static com.example.joon1.group_it_up.Controller.Main_List_Page.selectedEvent;
 
 import com.example.joon1.group_it_up.Model.EventCard;
+import com.example.joon1.group_it_up.Model.SaveSharedPreference;
 import com.example.joon1.group_it_up.R;
 
 public class View_EventCard_Page extends AppCompatActivity {
@@ -45,6 +46,8 @@ public class View_EventCard_Page extends AppCompatActivity {
         indorteamView.setText(selectedEvent.getRec().toString());
 
         // userText
+
+        userText.setText(SaveSharedPreference.getUserName(getApplicationContext()));
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

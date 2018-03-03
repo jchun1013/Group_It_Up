@@ -102,23 +102,4 @@ public class Main_List_Page extends AppCompatActivity {
     }
 }
 
-<<<<<<< HEAD
-//    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-//        return new CursorLoader(this);
-//    }
-//
-//    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-//        tAdapter.swapCursor(data);
-//    }
-//
-//    public void onLoaderReset(Loader<Cursor> loader) {
-//        tAdapter.swapCursor(null);
-//    }
-//
-//    public void onListItemClick(ListView lv, View v, int position, long id) {
-//
-//    }
-=======
-
->>>>>>> 4443342f4073c6e0390c9906add6e4c37206d375
 
