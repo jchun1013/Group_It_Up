@@ -27,6 +27,7 @@ public class Start_Page extends AppCompatActivity {
     static List<EventCard> eventCards = new ArrayList<>();
     FirebaseDatabase database;
     DatabaseReference databaseReference;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +44,16 @@ public class Start_Page extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> children = dataSnapshot.getChildren();
-
-                int count = 0;
+                System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
                 for (DataSnapshot child : children) {
                     EventCard e = child.getValue(EventCard.class);
+                    count++;
                     eventCards.add(e);
+                    count++;
+                    System.out.println("Event cards ; " + e.toString());
+                    System.out.println("Count : " + count);
                 }
+                eid = count;
             }
 
             @Override
@@ -57,7 +62,7 @@ public class Start_Page extends AppCompatActivity {
             }
         });
 
-
+        eid = count;
         if (SaveSharedPreference.getUserName(Start_Page.this).length() == 0) {
             regBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

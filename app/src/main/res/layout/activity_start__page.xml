@@ -11,10 +11,10 @@
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="301dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="188dp"
         android:background="@drawable/roundcorner"
         android:backgroundTint="#21ce99"
         android:text="Sign up"

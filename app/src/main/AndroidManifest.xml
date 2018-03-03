@@ -27,11 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controller.Main_List_Page$Registration_Page" />
+        <activity android:name=".Controller.Main_List_Page" />
         <activity android:name=".Controller.SignUp_Page" />
         <activity android:name=".Controller.Make_EventCard_Page" />
         <activity android:name=".Controller.View_EventCard_Page" />
-        <activity android:name=".Controller.Main_List_Page" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
