@@ -105,6 +105,8 @@ public class SignUp_Page extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     String id = databaseReference.push().getKey();
                                     databaseReference.child(id).setValue(newUser);
+                                    String id2 = databaseReference2.push().getKey();
+                                    databaseReference2.child(id2).setValue(username);
 //                                    Toast toast = Toast.makeText(getApplicationContext(),
 //                                            "Registration Successful!",
 //                                            Toast.LENGTH_SHORT);
