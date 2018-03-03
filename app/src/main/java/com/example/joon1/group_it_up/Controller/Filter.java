@@ -21,7 +21,7 @@ public class Filter extends AppCompatActivity {
 
     private Spinner sportSpinner, genderSpinner, expSpinner, recSpinner;
     Button submitBtn, backBtn;
-    static boolean filtered;
+    static boolean filtered = false;
     static String[] filterList;
 
     @Override
