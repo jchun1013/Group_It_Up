@@ -15,7 +15,6 @@ import com.example.joon1.group_it_up.R;
 
 public class View_EventCard_Page extends AppCompatActivity {
 
-    EventCard selectedEvent;
     TextView titleView,contactView, userText, locationText, dateText, experienceView,
     genderView, sportsView, indorteamView;
     Button backBtn;
@@ -36,8 +35,12 @@ public class View_EventCard_Page extends AppCompatActivity {
         sportsView = (TextView) findViewById(R.id.sportsView);
         indorteamView = (TextView) findViewById(R.id.indorteamView);
 
+//        System.out.println("_________________________________________" + selectedEvent.getTitle());
         titleView.setText(selectedEvent.getTitle());
+
+//        System.out.println("_________________________________________" + selectedEvent.getContact());
         contactView.setText(selectedEvent.getContact());
+//        System.out.println("_________________________________________" + selectedEvent.getLocation());
         locationText.setText(selectedEvent.getLocation());
         dateText.setText(selectedEvent.getDate());
         experienceView.setText(selectedEvent.getExperience().toString());
