@@ -189,4 +189,8 @@ public class Main_List_Page extends AppCompatActivity {
 //    public void onListItemClick(ListView lv, View v, int position, long id) {
 //
 //    }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/master
