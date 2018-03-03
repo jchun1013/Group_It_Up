@@ -9,13 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.MainActivity">
+        <activity android:name=".Controller.Main_List_Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Controller.Main_List_Page$Registration_Page" />
+        <activity android:name=".Controller.SignUp_Page" />
+        <activity android:name=".Controller.Make_EventCard_Page" />
+        <activity android:name=".Controller.View_EventCard_Page" />
+        <activity android:name=".Controller.Start_Page"></activity>
     </application>
 
 </manifest>

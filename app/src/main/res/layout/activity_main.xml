@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.joon1.group_it_up.Controller.MainActivity">
+    tools:context="com.example.joon1.group_it_up.Controller.Main_List_Page">
 
     <TextView
         android:layout_width="wrap_content"
