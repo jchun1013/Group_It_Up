@@ -4,126 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/start_page_white_background"
     tools:context="com.example.joon1.group_it_up.Controller.Make_EventCard_Page"
     tools:layout_editor_absoluteY="81dp">
 
     <Spinner
         android:id="@+id/sportSpinner"
-        android:layout_width="259dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/start_page_white_background"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="453dp" />
+        android:layout_marginBottom="206dp"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/genderSpinner"
+        app:layout_constraintStart_toStartOf="@+id/genderSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/locationText" />
 
     <Spinner
         android:id="@+id/genderSpinner"
-        android:layout_width="259dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="477dp" />
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/expSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/expSpinner"
+        app:layout_constraintStart_toStartOf="@+id/expSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/sportSpinner" />
 
     <Spinner
         android:id="@+id/expSpinner"
-        android:layout_width="259dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="501dp" />
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/recSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/recSpinner"
+        app:layout_constraintStart_toStartOf="@+id/recSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner" />
 
     <Button
         android:id="@+id/mapButton"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="141dp"
-        android:layout_height="45dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginStart="40dp"
         android:background="@drawable/roundcorner"
         android:backgroundTint="@color/start_page_white_background"
+        android:outlineProvider="bounds"
         android:text="Choose Location"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textColorHint="#21ce99"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="582dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submitBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recSpinner" />
 
     <Spinner
         android:id="@+id/recSpinner"
-        android:layout_width="259dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="525dp" />
+        android:layout_marginBottom="33dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/mapButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expSpinner" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
         android:ems="10"
         android:hint="Contact"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="377dp" />
+        app:layout_constraintBottom_toTopOf="@+id/sportSpinner"
+        app:layout_constraintStart_toStartOf="@+id/commentText"
+        app:layout_constraintTop_toBottomOf="@+id/commentText" />
 
     <EditText
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toTopOf="@+id/commentText"
+        app:layout_constraintStart_toStartOf="@+id/userText"
+        app:layout_constraintTop_toBottomOf="@+id/userText" />
 
     <EditText
         android:id="@+id/commentText"
-        android:layout_width="242dp"
-        android:layout_height="165dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="227dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="190dp"
         android:ems="10"
         android:hint="Comments"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintEnd_toStartOf="@+id/locationText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/userText"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginStart="40dp"
         android:hint="username"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="72dp" />
+        app:layout_constraintBottom_toTopOf="@+id/titleText"
+        app:layout_constraintEnd_toStartOf="@+id/dateText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <Button
         android:id="@+id/submitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="61dp"
         android:background="@drawable/roundcorner"
         android:backgroundTint="@color/start_page_white_background"
+        android:outlineProvider="bounds"
         android:text="Submit"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="582dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mapButton"
+        app:layout_constraintTop_toBottomOf="@+id/commentText" />
 
     <TextView
         android:id="@+id/dateText"
-        android:layout_width="65dp"
-        android:layout_height="23dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="170dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="63dp"
         android:text="date"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="59dp" />
+        app:layout_constraintBottom_toTopOf="@+id/locationText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/locationText"
-        android:layout_width="71dp"
-        android:layout_height="34dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="163dp"
+        android:layout_marginEnd="50dp"
         android:text="Address"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="256dp" />
+        app:layout_constraintBottom_toTopOf="@+id/sportSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/commentText"
+        app:layout_constraintTop_toBottomOf="@+id/dateText" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        app:layout_constraintBottom_toTopOf="@+id/userText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
