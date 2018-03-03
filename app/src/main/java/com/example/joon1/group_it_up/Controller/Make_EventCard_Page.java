@@ -20,8 +20,7 @@ public class Make_EventCard_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make__even_card__page);
 
-        sportSpinner.setAdapter(new ArrayAdapter<Sports>(this,
-                android.R.layout.simple_spinner_item, Sports.values()));
+
         mapButton = (Button)findViewById(R.id.mapButton);
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
