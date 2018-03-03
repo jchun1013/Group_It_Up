@@ -3,6 +3,8 @@ package com.example.joon1.group_it_up.Controller;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -11,6 +13,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.joon1.group_it_up.R;
@@ -28,6 +33,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.util.List;
+
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -40,10 +48,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private Marker currentLocationMarker;
     private static final int REQUEST_LOCATION_CODE = 99;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         System.out.println("-------------------------------------------------------------------");
         System.out.println("Its here!!!!!!!!!!!");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
@@ -94,9 +104,42 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
+        } else {
+            buildGoogleApiClient();;
+            mMap.setMyLocationEnabled(true);
         }
 
     }
+
+    public void onClick(View v) {
+        if (v.getId() == R.id.search_button) {
+            EditText tf_location = (EditText) findViewById(R.id.input_location);
+            String location = tf_location.getText().toString();
+            List<Address> addressList = null;
+            MarkerOptions mo = new MarkerOptions();
+
+            if (!location.equals("")) {
+                Geocoder geocoder = new Geocoder(this);
+                try {
+                    addressList = geocoder.getFromLocationName(location, 5);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                for (int i = 0; i < addressList.size(); i++) {
+                    Address myAddress = addressList.get(i);
+                    LatLng latlng = new LatLng(myAddress.getLatitude(), myAddress.getLongitude());
+                    mo.position(latlng);
+                    mo.title("search result");
+                    mMap.addMarker(mo);
+                    //camera position to last result
+                    mMap.animateCamera(CameraUpdateFactory.newLatLng(latlng));
+                }
+            }
+        }
+    }
+
+
 
     protected synchronized void buildGoogleApiClient()
     {
