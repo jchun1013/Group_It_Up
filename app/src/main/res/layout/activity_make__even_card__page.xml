@@ -230,7 +230,7 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal"
-        android:text="Address"
+        android:text="Add Location"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/commentText" />

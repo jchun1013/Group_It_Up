@@ -203,7 +203,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="ONLY:"
+        android:text="Looking for:"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -216,7 +216,7 @@
         android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginTop="8dp"
         android:text="individual_team"
         android:textSize="18sp"
@@ -267,5 +267,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/squarebarnew"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>
