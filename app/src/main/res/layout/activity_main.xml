@@ -7,13 +7,17 @@
     tools:context="com.example.joon1.group_it_up.Controller.Main_List_Page"
     tools:layout_editor_absoluteY="81dp">
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="53dp"
-        android:layout_marginEnd="34dp"
-        android:text="Button"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="37dp"
+        android:clickable="true"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorAccent"
+        app:srcCompat="@android:drawable/ic_input_add" />
 </android.support.constraint.ConstraintLayout>

@@ -2,6 +2,6 @@
     <string name="app_name">Group_It_Up</string>
     <string name="title_activity_registration__page">Registration_Page</string>
     <string name="title_activity_map">Map</string>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#1c1e1c</color>
     <string name="title_activity_maps1">Map</string>
 </resources>
