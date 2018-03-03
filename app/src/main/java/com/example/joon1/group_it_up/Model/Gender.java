@@ -5,6 +5,7 @@ package com.example.joon1.group_it_up.Model;
  */
 
 public enum Gender {
+    DEFAULT("Choose your gender"),
     MALE ("Male"),
     FEMALE ("Female");
 
