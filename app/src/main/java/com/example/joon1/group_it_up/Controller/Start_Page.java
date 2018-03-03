@@ -36,26 +36,26 @@ public class Start_Page extends AppCompatActivity {
         regBtn = (Button) findViewById(R.id.registerBtn);
         guestBtn = (Button) findViewById(R.id.guestBtn);
 
-        database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference();
-
-        databaseReference.child("EventCard").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Iterable<DataSnapshot> children = dataSnapshot.getChildren();
-
-                int count = 0;
-                for (DataSnapshot child : children) {
-                    EventCard e = child.getValue(EventCard.class);
-                    eventCards.add(e);
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        database = FirebaseDatabase.getInstance();
+//        databaseReference = database.getReference();
+//
+//        databaseReference.child("EventCard").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                Iterable<DataSnapshot> children = dataSnapshot.getChildren();
+//
+//                int count = 0;
+//                for (DataSnapshot child : children) {
+//                    EventCard e = child.getValue(EventCard.class);
+//                    eventCards.add(e);
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
 
         if (SaveSharedPreference.getUserName(Start_Page.this).length() == 0) {
