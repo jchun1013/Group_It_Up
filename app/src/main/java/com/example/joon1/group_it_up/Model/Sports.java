@@ -5,7 +5,6 @@ package com.example.joon1.group_it_up.Model;
  */
 
 public enum Sports {
-    DEFAULT("Choose a sport"),
     SOCCER ("Soccer"),
     BASKETBALL ("Basketball"),
     BASEBALL ("Baseball"),
