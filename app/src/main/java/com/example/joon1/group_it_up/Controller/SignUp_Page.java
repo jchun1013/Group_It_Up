@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.joon1.group_it_up.Model.EventCard;
 import com.example.joon1.group_it_up.Model.SaveSharedPreference;
+import com.example.joon1.group_it_up.Model.Uid;
 import com.example.joon1.group_it_up.Model.User;
 import com.example.joon1.group_it_up.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -38,6 +39,7 @@ public class SignUp_Page extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference = database.getInstance().getReference("user");
     DatabaseReference databaseReference2 = database.getInstance().getReference("username");
+    DatabaseReference databaseReference3 = database.getInstance().getReference("uid");
     FirebaseAuth firebaseAuth;
 
     private static final String TAG = "Registration :";
@@ -87,7 +89,6 @@ public class SignUp_Page extends AppCompatActivity {
                         }
                     });
                     if (!same) {
-                        uid++;
                         User newUser = new User(uid, username, password, contact);
                         addUser(newUser);
                     }
