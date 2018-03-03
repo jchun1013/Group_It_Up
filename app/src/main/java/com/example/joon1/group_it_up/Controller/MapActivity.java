@@ -161,6 +161,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             address += addressList.get(0).getPostalCode();
         }
 
+
         this.finish();
     }
 

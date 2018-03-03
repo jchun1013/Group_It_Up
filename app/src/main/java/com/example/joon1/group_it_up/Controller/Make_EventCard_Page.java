@@ -76,6 +76,8 @@ public class Make_EventCard_Page extends AppCompatActivity {
         dateText.setText(date);
 
         TextView selectedLocation = (TextView) findViewById(R.id.locationText);
+        System.out.println("-------------------------------------------------");
+        System.out.println(address);
         selectedLocation.setText(address);
 
         submitBtn = (Button) findViewById(R.id.submitBtn);
