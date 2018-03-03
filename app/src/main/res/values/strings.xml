@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Group_It_Up</string>
     <string name="title_activity_registration__page">Registration_Page</string>
+    <string name="title_activity_map">Map</string>
 </resources>
