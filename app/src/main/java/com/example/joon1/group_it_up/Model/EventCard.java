@@ -69,7 +69,7 @@ public class EventCard {
     public Sports getSports() {return this.sports;}
     public void setSports(Sports nSports) {this.sports = nSports;}
 
-    public Gender gender() {return this.gender;}
+    public Gender getGender() {return this.gender;}
     public void setGender(Gender nGender) {this.gender = nGender;}
 
     public Experience getExperience() {return this.experience;}
