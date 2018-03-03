@@ -63,10 +63,11 @@ public class Main_List_Page extends AppCompatActivity {
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 startActivity(new Intent(getApplicationContext(), View_EventCard_Page.class));
             }
         });
+        
 
 //        String[] titles = new String[eid];
 //        String[] sports = new String[eid];
