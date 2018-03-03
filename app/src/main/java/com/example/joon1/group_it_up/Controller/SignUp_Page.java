@@ -89,6 +89,7 @@ public class SignUp_Page extends AppCompatActivity {
                         }
                     });
                     if (!same) {
+
                         User newUser = new User(uid, username, password, contact);
                         addUser(newUser);
                     }
