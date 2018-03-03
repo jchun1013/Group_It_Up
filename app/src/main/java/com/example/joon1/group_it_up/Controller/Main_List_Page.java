@@ -32,41 +32,51 @@ import java.util.Map;
 import static com.example.joon1.group_it_up.Controller.Start_Page.eventCards;
 import static com.example.joon1.group_it_up.Model.EventCard.eid;
 
-public class Main_List_Page extends ListActivity
-        implements LoaderManager.LoaderCallbacks<Cursor> {
+public class Main_List_Page extends AppCompatActivity {
 
-    SimpleCursorAdapter tAdapter;
-    SimpleCursorAdapter sAdapter;
+//    SimpleCursorAdapter tAdapter;
+//    SimpleCursorAdapter sAdapter;
     FloatingActionButton addBtn;
     private ListView lv;
-    FirebaseDatabase database;
-    DatabaseReference databaseReference;
+//    FirebaseDatabase database;
+//    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] titles = new String[eid];
-        String[] sports = new String[eid];
-        int i = 0;
-
-        for (EventCard e : eventCards) {
-            titles[i] = e.getTitle();
-            sports[i] = e.getSports().toString();
+        String[] tArray = new String[eid];
+        String[] sArray = new String[eid];
+        for (int i = 0; i < eid; i++) {
+            tArray[i] = eventCards.get(i).getTitle();
+            sArray[i] = eventCards.get(i).getSports().toString();
         }
 
-        int[] toTitleViews = {android.R.id.text1};
-        int[] toSportsViews = {android.R.id.text2};
+        ListAdapter adapter = new ListAdapter(this, tArray, sArray);
+        lv = (ListView) findViewById(R.id.listV);
+        lv.setAdapter(adapter);
 
-        tAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
-                null, titles, toTitleViews, 0);
-        sAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2,
-                null, sports, toSportsViews, 0);
-        setListAdapter(tAdapter);
-        setListAdapter(sAdapter);
-
-        getLoaderManager().initLoader(0, null, this);
+//        String[] titles = new String[eid];
+//        String[] sports = new String[eid];
+//        int i = 0;
+//
+//        for (EventCard e : eventCards) {
+//            titles[i] = e.getTitle();
+//            sports[i] = e.getSports().toString();
+//        }
+//
+//        int[] toTitleViews = {android.R.id.text1};
+//        int[] toSportsViews = {android.R.id.text2};
+//
+//        tAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+//                null, titles, toTitleViews, 0);
+//        sAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2,
+//                null, sports, toSportsViews, 0);
+//        setListAdapter(tAdapter);
+//        setListAdapter(sAdapter);
+//
+//        getLoaderManager().initLoader(0, null, this);
 
 
 //        lv = (ListView) findViewById(R.id.listV);
@@ -159,19 +169,19 @@ public class Main_List_Page extends ListActivity
         });
     }
 
-    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        return new CursorLoader(this);
-    }
-
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        tAdapter.swapCursor(data);
-    }
-
-    public void onLoaderReset(Loader<Cursor> loader) {
-        tAdapter.swapCursor(null);
-    }
-
-    public void onListItemClick(ListView lv, View v, int position, long id) {
-        
-    }
+//    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+//        return new CursorLoader(this);
+//    }
+//
+//    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+//        tAdapter.swapCursor(data);
+//    }
+//
+//    public void onLoaderReset(Loader<Cursor> loader) {
+//        tAdapter.swapCursor(null);
+//    }
+//
+//    public void onListItemClick(ListView lv, View v, int position, long id) {
+//
+//    }
 }
