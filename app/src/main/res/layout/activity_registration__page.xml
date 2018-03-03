@@ -24,6 +24,7 @@
 
     <EditText
         android:id="@+id/userText"
+        android:gravity="center_horizontal"
         android:layout_width="287dp"
         android:layout_height="39dp"
         android:layout_marginEnd="8dp"
@@ -51,6 +52,7 @@
 
     <EditText
         android:id="@+id/passText"
+        android:gravity="center_horizontal"
         android:layout_width="283dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
@@ -79,6 +81,7 @@
 
     <EditText
         android:id="@+id/phoneText"
+        android:gravity="center_horizontal"
         android:layout_width="286dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
