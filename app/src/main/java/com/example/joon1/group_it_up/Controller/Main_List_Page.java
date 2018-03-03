@@ -104,7 +104,3 @@ public class Main_List_Page extends AppCompatActivity {
     }
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
