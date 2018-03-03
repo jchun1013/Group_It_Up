@@ -10,6 +10,12 @@ public class User {
     private String password;
     private String contact;
 
+    public User() {
+
+    }
+
+
+    
     public User(int uid, String account, String password, String contact) {
         this.uid = uid;
         this.account = account;
