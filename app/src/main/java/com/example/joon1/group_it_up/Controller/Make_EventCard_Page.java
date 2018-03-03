@@ -28,6 +28,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.example.joon1.group_it_up.Controller.MapActivity.address;
+
 public class Make_EventCard_Page extends AppCompatActivity {
 
     private Spinner sportSpinner, genderSpinner, expSpinner, recSpinner;
@@ -71,6 +73,9 @@ public class Make_EventCard_Page extends AppCompatActivity {
         username = SaveSharedPreference.getUserName(getApplicationContext());
         userText.setText(username);
         dateText.setText(date);
+
+        TextView selectedLocation = (TextView) findViewById(R.id.locationText);
+        selectedLocation.setText(address);
 
         submitBtn = (Button) findViewById(R.id.submitBtn);
         backButton = (Button) findViewById(R.id.backButton);

@@ -50,7 +50,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     private Marker currentLocationMarker;
     private static final int REQUEST_LOCATION_CODE = 99;
     private List<Address> addressList;
-
+    static String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,9 +144,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     }
 
     public void selectClicked(View v) {
-        TextView selectedLocation = (TextView) findViewById(R.id.locationText);
-        selectedLocation.setText(addressList.get(0).getAddressLine(0));
-        startActivity(new Intent(getApplicationContext(), Make_EventCard_Page.class));
+        address = addressList.get(0).getAddressLine(0);
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("address: " + address);
+        this.finish();
     }
 
 
