@@ -44,8 +44,8 @@ public class SignUp_Page extends AppCompatActivity {
         passText = (EditText) findViewById(R.id.passText);
         phoneText = (EditText) findViewById(R.id.phoneText);
 
-        //submitBtn = (Button) findViewById(R.id.submitBtn);
-        //cancelBtn = (Button) findViewById(R.id.cancelBtn);
+        submitBtn = (Button) findViewById(R.id.submitBtn);
+        cancelBtn = (Button) findViewById(R.id.cancelBtn);
 
         contact = 0;
 
