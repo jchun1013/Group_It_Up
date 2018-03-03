@@ -7,4 +7,8 @@ package com.example.joon1.group_it_up.Model;
 public class EventCard {
     private String title, comments;
     private int uid, contact;
+    private Sports sports;
+    private Gender gender;
+    private Experience experience;
+
 }

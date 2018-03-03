@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.joon1.group_it_up.Controller.Start_Page">
 
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="register"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+    <Button
+        android:id="@+id/guestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="427dp" />
 </android.support.constraint.ConstraintLayout>
