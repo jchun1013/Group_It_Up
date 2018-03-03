@@ -5,7 +5,6 @@ package com.example.joon1.group_it_up.Model;
  */
 
 public enum Experience {
-    DEFAULT ("Choose a skill level"),
     BEGINNER ("Beginner"),
     AMATEUR ("Amateur"),
     INTERMEDIATE ("Intermediate"),
