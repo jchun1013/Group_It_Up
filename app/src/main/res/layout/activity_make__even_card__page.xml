@@ -36,12 +36,35 @@
 
     <Button
         android:id="@+id/mapButton"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="43dp"
-        android:layout_marginEnd="37dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Choose Location"
+        android:textColorHint="#21ce99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Spinner
+        android:id="@+id/recSpinner"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/expSpinner"
+        app:layout_constraintStart_toStartOf="@+id/expSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/expSpinner" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Contact"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/recSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/recSpinner" />
 
 </android.support.constraint.ConstraintLayout>
