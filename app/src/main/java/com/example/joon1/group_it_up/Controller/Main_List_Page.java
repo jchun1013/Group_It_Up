@@ -49,6 +49,8 @@ public class Main_List_Page extends AppCompatActivity {
                 for (DataSnapshot child : children) {
                     EventCard eventCard = child.getValue(EventCard.class);
                     if (!myList.contains(eventCard)) {
+                        System.out.println("---------------------------------------------------------------------");
+                        System.out.println(eventCard);
                         myList.add(eventCard);
                     }
                 }
@@ -71,7 +73,7 @@ public class Main_List_Page extends AppCompatActivity {
                 titleList);
         lv.setAdapter(adapter);
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_2,
-                sportsList);
+                android.R.id.text1, sportsList);
         lv.setAdapter(adapter1);
 
         addBtn = (FloatingActionButton) findViewById(R.id.addBtn);

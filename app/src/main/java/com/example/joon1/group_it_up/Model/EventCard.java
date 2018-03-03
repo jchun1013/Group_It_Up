@@ -13,6 +13,10 @@ public class EventCard {
     private String date;
     private RecOrComp rec;
 
+    public EventCard() {
+
+    }
+
     public EventCard(String myTitle, String myComments, int myUid, String myContact,
                      Sports mySport, Gender myGender, Experience myExp,
                       String date, RecOrComp rec, String location) {

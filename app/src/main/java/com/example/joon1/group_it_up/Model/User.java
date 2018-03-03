@@ -9,14 +9,13 @@ public class User {
     private String account;
     private String password;
     private String contact;
-<<<<<<< HEAD
-=======
 
     public User() {
 
     }
 
->>>>>>> origin/master
+
+    
     public User(int uid, String account, String password, String contact) {
         this.uid = uid;
         this.account = account;
