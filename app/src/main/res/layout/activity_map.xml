@@ -1,18 +1,17 @@
-<RelativeLayout
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="650dp">
 
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="470dp"
-    tools:context="com.example.joon1.group_it_up.Controller.MapActivity"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentStart="true"/>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/input_location"
+        tools:context="com.example.joon1.group_it_up.Controller.MapActivity" />
 
     <EditText
         android:id="@+id/input_location"
@@ -38,7 +37,7 @@
         android:id="@+id/select_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/map"
         android:layout_alignParentEnd="true"
         android:onClick="selectClicked"
         android:text="SELECT" />

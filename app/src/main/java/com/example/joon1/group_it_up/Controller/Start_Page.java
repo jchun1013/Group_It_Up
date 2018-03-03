@@ -47,11 +47,13 @@ public class Start_Page extends AppCompatActivity {
                 System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
                 for (DataSnapshot child : children) {
                     EventCard e = child.getValue(EventCard.class);
+                    count++;
                     eventCards.add(e);
                     count++;
                     System.out.println("Event cards ; " + e.toString());
                     System.out.println("Count : " + count);
                 }
+                eid = count;
             }
 
             @Override
