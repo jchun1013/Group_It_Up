@@ -5,7 +5,7 @@ package com.example.joon1.group_it_up.Model;
  */
 
 public class User {
-    public static int uid = 0;
+    public static int uid;
     private String account;
     private String password;
     private String contact;

@@ -36,7 +36,7 @@ import static com.example.joon1.group_it_up.Model.EventCard.eid;
 public class Main_List_Page extends AppCompatActivity {
 
 
-//    SimpleCursorAdapter sAdapter;
+    //    SimpleCursorAdapter sAdapter;
     FloatingActionButton addBtn;
     private ListView lv;
 //    FirebaseDatabase database;
@@ -47,6 +47,9 @@ public class Main_List_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("_________________________________");
+        System.out.println("This is eid " + eid);
+        System.out.println("This is size of " + eventCards.size());
         String[] tArray = new String[eid];
         String[] sArray = new String[eid];
         for (int i = 0; i < eid; i++) {
@@ -54,7 +57,7 @@ public class Main_List_Page extends AppCompatActivity {
             sArray[i] = eventCards.get(i).getSports().toString();
         }
 
-        ListAdapter adapter = new ListAdapter(this, tArray, sArray);
+        ListAdapterHelper adapter = new ListAdapterHelper(this, tArray, sArray);
         lv = (ListView) findViewById(R.id.listV);
         lv.setAdapter(adapter);
 
@@ -169,6 +172,7 @@ public class Main_List_Page extends AppCompatActivity {
             }
         });
     }
+}
 
 //    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
 //        return new CursorLoader(this);
@@ -185,8 +189,4 @@ public class Main_List_Page extends AppCompatActivity {
 //    public void onListItemClick(ListView lv, View v, int position, long id) {
 //
 //    }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/master
+

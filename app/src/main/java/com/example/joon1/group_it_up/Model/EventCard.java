@@ -12,7 +12,7 @@ public class EventCard {
     private Experience experience;
     private String date;
     private RecOrComp rec;
-    public static int eid = 0;
+    public static int eid;
 
     public EventCard() {
 
