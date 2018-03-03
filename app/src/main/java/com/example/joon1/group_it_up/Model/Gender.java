@@ -16,5 +16,5 @@ public enum Gender {
 
     public String toString() {return this.myGender;}
 
-    
+
 }
