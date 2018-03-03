@@ -18,6 +18,6 @@ public enum Sports {
     Sports(String aSport) {
         sport = aSport;
     }
-    
+
     public String toString() {return this.sport;}
 }

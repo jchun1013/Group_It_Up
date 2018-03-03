@@ -3,15 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Group_It_Up.iml" filepath="$PROJECT_DIR$/Group_It_Up.iml" />
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/Group_It_Up.iml" filepath="$PROJECT_DIR$/Group_It_Up.iml" />
-      <module fileurl="file://C:\Users\Minky\Desktop\hack\Group_It_Up\Group_It_Up.iml" filepath="C:\Users\Minky\Desktop\hack\Group_It_Up\Group_It_Up.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Minky\Desktop\hack\Group_It_Up\app\app.iml" filepath="C:\Users\Minky\Desktop\hack\Group_It_Up\app\app.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
->>>>>>> 8dd35037e920bca4d5c45de279ee6773d2b91e7c
     </modules>
   </component>
 </project>
