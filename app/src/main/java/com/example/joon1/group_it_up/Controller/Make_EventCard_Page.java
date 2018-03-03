@@ -121,7 +121,8 @@ public class Make_EventCard_Page extends AppCompatActivity {
 //                            commentText.getText().toString(), uid, contact,
 //                            (Sports) sportSpinner.getSelectedItem(),
 //                            (Gender) genderSpinner.getSelectedItem(),
-//                            (Experience) expSpinner.getSelectedItem(), date);
+//                            (Experience) expSpinner.getSelectedItem(),
+//                            (RecOrComp) recSpinner.getSelectedItem(), date);
 //                    addEventCard(eventCard);
                 }
             }

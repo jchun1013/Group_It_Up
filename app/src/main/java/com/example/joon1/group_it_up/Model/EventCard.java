@@ -11,9 +11,11 @@ public class EventCard {
     private Gender gender;
     private Experience experience;
     private String date;
+    private RecOrComp rec;
 
     public EventCard(String myTitle, String myComments, int myUid, String myContact,
-                     Sports mySport, Gender myGender, Experience myExp, String date, String location) {
+                     Sports mySport, Gender myGender, Experience myExp,
+                      String date, RecOrComp rec, String location) {
         this.title = myTitle;
         this.comments = myComments;
         this.uid = myUid;
@@ -23,8 +25,15 @@ public class EventCard {
         this.experience = myExp;
         this.date = date;
         this.location = location;
+        this.rec = rec;
     }
 
+    public RecOrComp getRec() {
+        return rec;
+    }
+    public void setRec(RecOrComp rec) {
+        this.rec = rec;
+    }
     public String getLocation() {
         return location;
     }
