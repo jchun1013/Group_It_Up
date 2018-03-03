@@ -121,10 +121,7 @@ public class Make_EventCard_Page extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (contactText.getText() == null ||  titleText.getText() == null
-                        || ((Sports) sportSpinner.getSelectedItem()) == Sports.DEFAULT
-                        || ((Gender) genderSpinner.getSelectedItem()) == Gender.DEFAULT
-                        || ((Experience) expSpinner.getSelectedItem()) == Experience.DEFAULT) {
+                if (contactText.getText() == null ||  titleText.getText() == null) {
                     Toast.makeText(Make_EventCard_Page.this, "One or more field is empty", Toast.LENGTH_SHORT).show();
                 } else {
                     eid++;
