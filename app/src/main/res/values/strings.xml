@@ -3,4 +3,5 @@
     <string name="title_activity_registration__page">Registration_Page</string>
     <string name="title_activity_map">Map</string>
     <color name="white">#FFFFFF</color>
+    <string name="title_activity_maps1">Map</string>
 </resources>
