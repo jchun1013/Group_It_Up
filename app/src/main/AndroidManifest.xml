@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.Main_List_Page">
+        <activity android:name=".Controller.Start_Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,7 @@
         <activity android:name=".Controller.SignUp_Page" />
         <activity android:name=".Controller.Make_EventCard_Page" />
         <activity android:name=".Controller.View_EventCard_Page" />
-        <activity android:name=".Controller.Start_Page" />
+        <activity android:name=".Controller.Main_List_Page" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
