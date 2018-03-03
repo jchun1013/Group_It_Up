@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import static com.example.joon1.group_it_up.Controller.MapActivity.address;
 import static com.example.joon1.group_it_up.Model.EventCard.eid;
@@ -39,7 +40,7 @@ public class Make_EventCard_Page extends AppCompatActivity {
     private TextView userText, dateText;
     private Button submitBtn, backButton;
 
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd");
     public final String date = sdf.format(new Date());
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -141,6 +142,7 @@ public class Make_EventCard_Page extends AppCompatActivity {
     private void addEventCard(final EventCard eventCard) {
         String id = databaseReference.push().getKey();
         databaseReference.child(id).setValue(eventCard);
+        Start_Page.setEventCards(eventCard);
         startActivity(new Intent(getApplicationContext(), Main_List_Page.class));
     }
 }

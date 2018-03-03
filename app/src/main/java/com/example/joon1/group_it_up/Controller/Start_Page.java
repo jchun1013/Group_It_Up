@@ -79,7 +79,11 @@ public class Start_Page extends AppCompatActivity {
 
     }
 
-    public List<EventCard> getEventCards() {
+    public static List<EventCard> getEventCards() {
         return eventCards;
+    }
+
+    public static void setEventCards(EventCard e) {
+        eventCards.add(e);
     }
 }
