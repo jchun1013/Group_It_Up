@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.joon1.group_it_up.R;
 
-public class MainActivity extends AppCompatActivity {
+public class Start_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_start__page);
     }
 }
