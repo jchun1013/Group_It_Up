@@ -17,8 +17,10 @@ import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 import com.example.joon1.group_it_up.Model.EventCard;
+import com.example.joon1.group_it_up.Model.SaveSharedPreference;
 import com.example.joon1.group_it_up.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -99,6 +101,12 @@ public class Main_List_Page extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (SaveSharedPreference.getUserName(getApplicationContext()).length() == 0) {
+                    Toast nullToast = Toast.makeText(getApplicationContext(),
+                            "You need to be registered to write a post.", Toast.LENGTH_LONG);
+                    nullToast.show();
+                    startActivity(new Intent(getApplicationContext(), SignUp_Page.class));
+                }
                 startActivity(new Intent(getApplicationContext(), Make_EventCard_Page.class));
             }
         });

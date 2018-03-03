@@ -49,7 +49,6 @@ public class Start_Page extends AppCompatActivity {
                     EventCard e = child.getValue(EventCard.class);
                     count++;
                     eventCards.add(e);
-                    count++;
                     System.out.println("Event cards ; " + e.toString());
                     System.out.println("Count : " + count);
                 }
