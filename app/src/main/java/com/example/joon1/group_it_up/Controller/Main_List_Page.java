@@ -38,6 +38,7 @@ public class Main_List_Page extends AppCompatActivity {
 
     //    SimpleCursorAdapter sAdapter;
     FloatingActionButton addBtn;
+    Button filterBtn;
     private ListView lv;
 //    FirebaseDatabase database;
 //    DatabaseReference databaseReference;

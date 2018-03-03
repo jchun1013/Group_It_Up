@@ -27,7 +27,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import static com.example.joon1.group_it_up.Controller.MapActivity.address;
 import static com.example.joon1.group_it_up.Model.EventCard.eid;
