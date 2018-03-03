@@ -5,14 +5,15 @@ package com.example.joon1.group_it_up.Model;
  */
 
 public class EventCard {
-    private String title, comments;
-    private int uid, contact;
+    private String title, comments, contact, location;
+    private int uid;
     private Sports sports;
     private Gender gender;
     private Experience experience;
+    private String date;
 
-    public EventCard(String myTitle, String myComments, int myUid, int myContact,
-                     Sports mySport, Gender myGender, Experience myExp) {
+    public EventCard(String myTitle, String myComments, int myUid, String myContact,
+                     Sports mySport, Gender myGender, Experience myExp, String date, String location) {
         this.title = myTitle;
         this.comments = myComments;
         this.uid = myUid;
@@ -20,8 +21,18 @@ public class EventCard {
         this.sports = mySport;
         this.gender = myGender;
         this.experience = myExp;
+        this.date = date;
+        this.location = location;
     }
 
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    }
+    public String getDate() {return this.date;}
+    public void setDate(String date) {this.date = date;}
     public String getTitle() {return this.title;}
     public void setTitle(String nTitle) {this.title = nTitle;}
 
@@ -31,8 +42,8 @@ public class EventCard {
     public int getUid() {return this.uid;}
     public void setUid(int nUid) {this.uid = nUid;}
 
-    public int getContact() {return this.contact;}
-    public void setContact(int nContact) {this.contact = nContact;}
+    public String getContact() {return this.contact;}
+    public void setContact(String nContact) {this.contact = nContact;}
 
     public Sports getSports() {return this.sports;}
     public void setSports(Sports nSports) {this.sports = nSports;}
