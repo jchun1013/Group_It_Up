@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -29,7 +30,7 @@ public class Main_List_Page extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference databaseReference;
     public static List<EventCard> myList;
-
+    static int placed = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,34 @@ public class Main_List_Page extends AppCompatActivity {
                 android.R.id.text1, sportsList);
         lv.setAdapter(adapter1);
 
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    final int position, long id) {
+                placed = position;
+                databaseReference.child("EventCard").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        Iterable<DataSnapshot> children = dataSnapshot.getChildren();
+                        EventCard selected = myList.get(placed);
+
+                        for (DataSnapshot child : children) {
+                            EventCard childValue = child.getValue(EventCard.class);
+                            if (childValue.get() == selected.getId()) {
+                                purityReport = childValue;
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+                startActivity(new Intent(getApplicationContext(), View_EventCard_Page.class));
+            }
+        });
         addBtn = (FloatingActionButton) findViewById(R.id.addBtn);
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
