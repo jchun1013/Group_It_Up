@@ -32,6 +32,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static com.example.joon1.group_it_up.Controller.Filter.filterList;
+import static com.example.joon1.group_it_up.Controller.Filter.filtered;
 import static com.example.joon1.group_it_up.Controller.Start_Page.eventCards;
 import static com.example.joon1.group_it_up.Model.EventCard.eid;
 
@@ -44,23 +46,57 @@ public class Main_List_Page extends AppCompatActivity {
     private ListView lv;
     static int placed;
     public static EventCard selectedEvent;
+    List<EventCard> eList = new ArrayList<EventCard>();
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference = database.getReference();
+    DatabaseReference databaseReference = database.getReference("EventCard");;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        System.out.println("_________________________________");
-        System.out.println("This is eid " + eid);
-        System.out.println("This is size of " + eventCards.size());
         String[] tArray = new String[eid];
         String[] sArray = new String[eid];
-        for (int i = 0; i < eid; i++) {
-            tArray[i] = eventCards.get(i).getTitle();
-            sArray[i] = eventCards.get(i).getSports().toString();
+        System.out.println("--------------------------" + filterList);
+        if (filtered == false) {
+            System.out.println("_________________________________");
+            System.out.println("This is eid " + eid);
+            System.out.println("This is size of " + eventCards.size());
+            for (int i = 0; i < eid; i++) {
+                tArray[i] = eventCards.get(i).getTitle();
+                sArray[i] = eventCards.get(i).getSports().toString();
+            }
+        } else {
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+
+                    Iterable<DataSnapshot> children = dataSnapshot.getChildren();
+                    for (DataSnapshot child : children) {
+                        EventCard eventCard = child.getValue(EventCard.class);
+
+                        if (eventCard.getSports().toString().equals(filterList[0]) && eventCard.getGender().toString().equals(filterList[1])
+                                && eventCard.getExperience().toString().equals(filterList[2]) && eventCard.getRec().toString().equals(filterList[3])) {
+                            eList.add(eventCard);
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+            tArray = new String[eList.size()];
+            sArray = new String[eList.size()];
+            System.out.println("(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((");
+            System.out.println(eList.get(0).toString());
+            for (int i = 0; i < eList.size(); i++) {
+                tArray[i] = eList.get(i).getTitle();
+                sArray[i] = eList.get(i).getSports().toString();
+            }
+
         }
 
         ListAdapterHelper adapter = new ListAdapterHelper(this, tArray, sArray);

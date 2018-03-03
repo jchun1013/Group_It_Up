@@ -1,5 +1,6 @@
 package com.example.joon1.group_it_up.Controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -49,7 +50,7 @@ public class Filter extends AppCompatActivity {
                 filtered = true;
                 filterList = new String[]{sportSpinner.getSelectedItem().toString(), genderSpinner.getSelectedItem().toString(),
                         expSpinner.getSelectedItem().toString(), recSpinner.getSelectedItem().toString()};
-                finish();
+                startActivity(new Intent(getApplicationContext(), Main_List_Page.class));;
 
             }
         });
