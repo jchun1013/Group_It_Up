@@ -30,6 +30,7 @@ public class SignUp_Page extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference = database.getInstance().getReference("user");
+    DatabaseReference databaseReference2 = database.getInstance().getReference("username");
     FirebaseAuth firebaseAuth;
 
     private static final String TAG = "Registration :";
@@ -61,6 +62,7 @@ public class SignUp_Page extends AppCompatActivity {
                             "One or more fields are empty.", Toast.LENGTH_LONG);
                     nullToast.show();
                 } else {
+                    for ()
                     uid++;
                     User newUser = new User(uid, username, password, contact);
                     addUser(newUser);
