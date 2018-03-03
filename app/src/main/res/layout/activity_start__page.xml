@@ -8,18 +8,30 @@
 
     <Button
         android:id="@+id/registerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="register"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="453dp"
+        android:background="@color/colorPrimary"
+        android:text="Sign up"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/guestBtn"
-        app:layout_constraintStart_toStartOf="@+id/guestBtn" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/guestBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:text="Guest"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="116dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:text="Continue as guest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+</android.support.constraint.ConstraintLayout>
