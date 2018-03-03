@@ -35,7 +35,11 @@ import static com.example.joon1.group_it_up.Model.EventCard.eid;
 
 public class Main_List_Page extends AppCompatActivity {
 
+<<<<<<< HEAD
     //    SimpleCursorAdapter tAdapter;
+=======
+//    SimpleCursorAdapter tAdapter;
+>>>>>>> origin/master
 //    SimpleCursorAdapter sAdapter;
     FloatingActionButton addBtn;
     private ListView lv;
@@ -185,4 +189,8 @@ public class Main_List_Page extends AppCompatActivity {
 //    public void onListItemClick(ListView lv, View v, int position, long id) {
 //
 //    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
