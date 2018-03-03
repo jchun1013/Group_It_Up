@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.joon1.group_it_up.Model.SaveSharedPreference;
 import com.example.joon1.group_it_up.Model.User;
 import com.example.joon1.group_it_up.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -111,6 +112,7 @@ public class SignUp_Page extends AppCompatActivity {
 //                                            "Registration Successful!",
 //                                            Toast.LENGTH_SHORT);
 //                                    toast.show();
+                                    SaveSharedPreference.setUserName(getApplicationContext(), username);
                                     startActivity(new Intent(getApplicationContext(), Main_List_Page.class));
                                 }
                             }
