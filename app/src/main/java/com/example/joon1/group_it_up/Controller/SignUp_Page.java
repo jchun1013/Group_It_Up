@@ -58,6 +58,13 @@ public class SignUp_Page extends AppCompatActivity {
         submitBtn = (Button) findViewById(R.id.submitBtn);
         cancelBtn = (Button) findViewById(R.id.cancelBtn);
 
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Start_Page.class));
+            }
+        });
+
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
