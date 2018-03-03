@@ -17,8 +17,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import static com.example.joon1.group_it_up.Model.User.uid;
 
@@ -35,6 +38,7 @@ public class SignUp_Page extends AppCompatActivity {
 
     private static final String TAG = "Registration :";
 
+    boolean same = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +66,29 @@ public class SignUp_Page extends AppCompatActivity {
                             "One or more fields are empty.", Toast.LENGTH_LONG);
                     nullToast.show();
                 } else {
-                    for ()
-                    uid++;
-                    User newUser = new User(uid, username, password, contact);
-                    addUser(newUser);
+                    databaseReference2.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Iterable<DataSnapshot> children = dataSnapshot.getChildren();
+
+                            for (DataSnapshot child : children) {
+                                String usedName = child.getValue(String.class);
+                                if (usedName.equals(username)) {
+                                    same = true;
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                    if (!same) {
+                        uid++;
+                        User newUser = new User(uid, username, password, contact);
+                        addUser(newUser);
+                    }
                 }
             }
         });
