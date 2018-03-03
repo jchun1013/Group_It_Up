@@ -89,7 +89,7 @@ public class Main_List_Page extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), View_EventCard_Page.class));
             }
         });
-        
+
 
 
         addBtn = (FloatingActionButton) findViewById(R.id.addBtn);
